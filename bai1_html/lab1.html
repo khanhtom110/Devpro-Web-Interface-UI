@@ -1,0 +1,205 @@
+<!DOCTYPE html> <!-- xac dinh version html-5 -->
+<html>
+<!-- chua cac the cau hinh file html -->
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bai1 html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #logo {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 30px;
+        }
+
+        #login {
+            font-size: 16px;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 100px auto 0;
+            display: flex;
+
+        }
+
+        .left {
+            width: 300px;
+            height: 600px;
+            background-color: cadetblue;
+        }
+
+        .right {
+            width: calc(100% - 300px);
+            box-sizing: border-box;
+            padding: 0 15px;
+        }
+
+        nav {
+            background-color: rgb(188, 107, 107);
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+        }
+
+        ul li {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            /* Hien thi con tro chuot hinh ban tay */
+            cursor: pointer;
+            padding: 20px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cau truc the html:
+        1. The mo/dong:
+            <ten_the > Noidung </ten_the>
+        2. The mo:
+        <Ten-the /> 
+    -->
+    <!-- Loai the:
+        1. The block: div, p, h1->6, center
+        css display: block => width:100% phan tu cha
+        2. The inline: span, b, i, u
+        css display: block => width:noi dung no chua
+    -->
+    <header>
+        <!-- The div: phan chia bo cuc trang va cac thanh phan trang web -->
+        <div id="logo">This is logo</div>
+        <div id="login">Dang nhap/Dang ky</div>
+
+    </header>
+    <nav>
+        <!--The danh sach:
+            The ul li: chu yeu lam menu
+        -->
+        <!--Phim copy nhanh: ALT + SHIFT + Phim len/xuong -->
+        <ul>
+            <!--
+                <a href="duong dan">Noi dung</a>
+                target="_blank":    khi click nhay sang tab moi
+                1.Đường dẫn tuyệt đối
+                => Dẫn chính xác tới đích
+                VD: D://folder??
+                2.Đường dẫn tương đối
+                => Dùng folder chứa cả file làm gốc để map với nhau
+                TH1: file được nhúng cùng folder gốc vs file chứa nó
+                VD: ./ten_folder/a.html
+                TH2: Ngược lại 
+                VD: ../ => Thoat khoi 1 folder
+            -->
+            <li>
+                <a href="C:\Users\ThinkPad\Workspace\Khoa_Hoc_Devpro\FE\Devpro-Web-Interface-UI\bai1_html\lab2.html"
+                    target="_blank">Trang chu</a>
+            </li>
+            <li>
+                <a href="./lab2.html">San pham</a>
+            </li>
+            <li>
+                <a>Tin tuc</a>
+            </li>
+            <li>Gioi thieu</li>
+            <li>Lien he</li>
+            <li>He thong cua hang</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="left">
+
+            </div>
+            <div class="right">
+                <!-- The h1 -> h6: dùng SEO website
+                    => Tu khoa quan trong (h1)
+                    => Muc do quan trong giam dan -> h6 
+                -->
+                <h1>
+                    <center>Noi dung bai viet tin tuc</center>
+                </h1>
+                <!--
+                    The p:      chua doan van ban
+                    The b:      bold (inline)
+                    The i:      italic
+                    The u:      underline
+                    The br:     break (The mo)
+                    The center: can giua noi dung ben trong
+                    The hr:     phan chua ngang man hinh
+                    The span:   dung khi text co dac diem rieng (Vi du: set css color)
+                -->
+                <p>
+                    <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</b> <i> Obcaecati, necessitatibus
+                        aliquid</i> <u> vel ad fuga modi</u> corrupti sed facilis dignissimos nihil? Mollitia ab
+                    corrupti
+                    facilis ratione dicta explicabo?
+                </p>
+                <p>
+                    <span style="color: red;"> spaLorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+                    Obcaecati, necessitatibus aliquid vel ad
+                    nulla fuga modi corrupti sed facilis dignissimos nihil? Mollitia ab corrupti officiis voluptate
+                    facilis ratione dicta explicabo?
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, necessitatibus aliquid vel ad
+                    nulla fuga modi corrupti sed facilis dignissimos nihil? Mollitia ab corrupti officiis voluptate
+                    facilis ratione dicta explicabo?
+                </p>
+                <center>
+                    <img src="media/image.jpg" width="500px" height="">
+                    <video controls>
+                        <source src="media/video.mp4">
+                    </video>
+                    <audio controls>
+                        <source src="media/audio.mp3">
+                    </audio>
+                </center>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!--The danh sach 
+            ol li: muc luc
+        -->
+        <ol type="A">
+            <li>Danh sach cha 1
+                <ol type="I">
+                    <li>Danh sach con</li>
+                    <li>Danh sach con</li>
+                    <li>Danh sach con</li>
+                    <li>Danh sach con</li>
+                    <li>Danh sach con</li>
+                </ol>
+            </li>
+            <li>Danh sach cha 2</li>
+            <li>Danh sach cha 3</li>
+            <li>Danh sach cha 4</li>
+            <li>Danh sach cha 5</li>
+            <li>Danh sach cha 6</li>
+        </ol>
+    </footer>
+</body>
+
+</html>
