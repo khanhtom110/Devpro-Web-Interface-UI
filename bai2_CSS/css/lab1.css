@@ -1,0 +1,17 @@
+/* CAC CACH SELECTOR DEN DOI TUONG HTML
+
+*                |          tat ca 
+.ten_class:      |          chon theo ten cua class
+h1               |          chon theo ten the
+#ten_id          |          chon theo ten id
+
+
+*/
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.square {
+    border-radius: 50%;
+}

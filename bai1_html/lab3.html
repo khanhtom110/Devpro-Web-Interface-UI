@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Html form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .form {
+            max-width: 600px;
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 100px auto;
+            box-shadow: 0 0 5px #ccc;
+            border-radius: 5px;
+        }
+
+        .row {
+            margin-bottom: 15px;
+        }
+
+        .row label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .form-control {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <!-- 
+        GET: lam form tim kiem
+        POST: post data len server thong qua formdata (tao moi)
+        PUT: cung post data len server thong qua formdata (Update)
+        DELETE: Xoa
+        -->
+        <h1>
+            <center>Dang ky tai khoan</center>
+        </h1>
+        <form method="POST" action="">
+            <div class="row">
+                <label for="">Ho ten</label>
+                <!-- Nhap thong tin dang text ngan -->
+                <input type="text" name="fullname" class="form-control" value="" />
+            </div>
+            <div class="row">
+                <label for="">Email</label>
+                <!-- Nhap thong tin dang email, auto validate email khi submit -->
+                <input type="email" name="email" class="form-control" value="" />
+            </div>
+            <div class="row">
+                <label for="">Mat khau</label>
+                <!-- Nhap thong tin dang password ************* -->
+                <input type="password" name="password" class="form-control" value="" />
+            </div>
+            <div class="row">
+                <label for="">Gioi tinh</label>
+                <!-- Chon 1 trong nhieu option
+                CHECKED: auto tick 1 option 
+                -->
+                <div>
+                    <label for="">
+                        <input type="radio" name="gender" value="1" checked />Nam
+                    </label>
+                    <label for="">
+                        <input type="radio" name="gender" value="0" />Nu
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <label for="">So thich</label>
+                <!-- 
+                hobby[]: bieu thi cho 1 mang
+                -->
+                <div>
+                    <label for="">
+                        <input type="checkbox" name="hobby[]" value="1" />Da bong
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="hobby[]" value="2" />Da bong
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="hobby[]" value="3" />Da bong
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Avatar</label>
+                <!-- Dung upload file
+                accept: loc type file dau vao  (VD: image/*: loc tat ca image)
+                -->
+                <input type="file" name="avatar" accept="image/*">
+            </div>
+            <div class="row">
+                <label for="">Que quan</label>
+                <select name="city" id="" class="form-control">
+                    <option value="">--Vui long chon--</option>
+                    <option value="HN">Ha Noi</option>
+                    <option value="DN">Da Nang</option>
+                    <option value="HCM">Ho Chi Minh</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="">Mo ta ban than</label>
+                <!-- textarea: hien thi input paragraph -->
+                <textarea name="description" style="width: 100%; min-height: 250px;"></textarea>
+            </div>
+            <div class="row">
+                <!-- auto thuc hien action cua submit luon -->
+                <button type="submit">Dang ky</button>
+                <button type="button">Huy bo</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+* {
+    font-family: "Arial";
+}
+
+body {
+    /* 
+        margin                          |       Khoang cach tu border cua phan tu html ra ben ngoai
+    */
+    margin: 0;
+}
+
+header {
+    /* 
+        padding                         |       Khoang cach tu border vao trong content cua phan tu do
+        display                         |       Phan chia bo cuc trong html
+        justify-content                 |       Can chinh phan tu theo chieu ngang
+        justify-content: flex-start;    |       Can sang trai, nguoc lai voi flex-end
+                         center;        |       Can ra giua khung chua
+                         space-around;  |       Ben trai && phai phan tu con cach 1 khoang deu nhau
+                         space-between; |       Cac phan tu con cach deu nhau o giua
+        align-items:                    |       Can chinh phan tu theo chieu doc
+                     flex-start;        |       Can len top, nguoc lai voi flex-end
+                     center;            |       Can ra giua khung chua
+    */
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    /* 
+        font-weight                     |       Thay doi do dam nhat cua text (bold: 700)
+        text-transform:                 |       Text viet hoa ||thuong
+                        uppercase       |       Viet hoa het
+                        lowercase       |       Viet thuong het
+                        capitalize      |       Viet hoa chu cai dau
+                        none            |       0
+        text-shadow:                    |       Tao bong cho text
+                     Apx Bpx Cpx color  |       A(Do bong sang phai) B{Do bong xuong duoi) C(Độ nhòe) color(mau)
+    */
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: none;
+    text-shadow: 5px 8px 4px #828282;
+}
+
+/* Selector thong qua thuoc tinh the html */
+input[name="keyword"] {
+    /* 
+        border: Apx style color         |       A(do day) style(solid-net lien, dashed-gach noi, dotted-chấm nối) color(mau sac)
+
+    */
+    width: 300px;
+    height: 33px;
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* su kien focus cua input */
+input[name="keyword"]:focus {
+    /* 
+        outline                         |       Duong bao ngoai border va song song vs border
+
+    */
+    outline: unset;
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    color: white;
+    background-color: brown;
+    border: 0;
+    border-radius: 10px;
+}
+
+.login a {
+    /* 
+        display: inline                 |       width = noi dung no chua
+                                                khong su dung duoc thuoc tinh css width, height, padding, margin
+
+                 block                  |       width = 100% phan tu cha
+                                                su dung duoc thuoc tinh css width, height, padding, margin
+
+                 inline-block           |       width ban dau bang noi dung no chua     
+                                                su dung duoc thuoc tinh css width, height, padding, margin      
+        text-align: center||left||right |       Can chu
+        text-decoration:
+                         underline      |       gach chan
+                         overline       |       gach tren dau
+                         line-through   |       gach ngang chu
+                         none
+
+
+    */
+    display: inline-block;
+    width: 50px;
+    padding: 10px;
+}
+
+/* Selector den phan tu con dau tien */
+.login a:first-child {
+    background-color: orange;
+}
+
+.login a:last-child {
+    background-color: chocolate;
+    text-decoration: line-through;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav {
+    background-color: brown;
+
+}
+
+.menu {
+    display: flex;
+}
+
+/* Selector den cac phan tu con cap 1 */
+.menu>li>a {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding: 15px 25px;
+}
+
+/* Su kien con tro chuot nam tren phan tu html */
+.menu>li>a:hover {
+    background-color: orange;
+}
+
+.menu>li>a.active {
+    background-color: orange;
+}
