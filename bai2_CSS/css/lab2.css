@@ -42,7 +42,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     text-transform: none;
-    text-shadow: 5px 8px 4px #828282;
+    /* text-shadow: 5px 8px 4px #828282; */
 }
 
 /* Selector thong qua thuoc tinh the html */
@@ -57,8 +57,8 @@ input[name="keyword"] {
     border: 1px solid #ccc;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 /* su kien focus cua input */
@@ -71,7 +71,7 @@ input[name="keyword"]:focus {
 }
 
 button[type="submit"] {
-    padding: 10px 15px;
+    padding: 11px 15px;
     color: white;
     background-color: brown;
     border: 0;
@@ -98,18 +98,21 @@ button[type="submit"] {
 
     */
     display: inline-block;
-    width: 50px;
+    width: 100px;
     padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* Selector den phan tu con dau tien */
 .login a:first-child {
     background-color: orange;
+    text-decoration: none;
 }
 
 .login a:last-child {
     background-color: chocolate;
-    text-decoration: line-through;
+    text-decoration: none;
 }
 
 ul {
@@ -146,3 +149,220 @@ nav {
 .menu>li>a.active {
     background-color: orange;
 }
+
+.menu>li {
+    /* position: relative               |       Bien phan tu html thanh phan tu co toa do 2D(top, left, right, bottom)->De di chuyen phan tu khac khoi toa do goc(Toa do goc la vi tri cua chinh no) 
+                                                Thuong tao cap cha con voi position: absolute;
+    */
+    position: relative;
+}
+
+.sub_menu {
+    /* 
+        position: absolute              |       Bien phan tu html thanh phan tu co toa do 2D
+                                                Toa do goc cua no:
+                                                    1.Voi cha la position: relative
+                                                        Toa do goc la phan tu cha
+                                                    2.Khong phan tu nao co position: relative
+                                                        Toa do goc la toa do man hinh
+    */
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 0 0 5px 5px;
+    /* 
+        opacity                         |           Do mo(Co gia tri tu 0->1)
+        visibility                      |           An su kien con tro chuot di
+        transition                      |           Thoi gian chuyen dong
+    */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.sub_menu>li>a {
+    text-decoration: none;
+    color: #222222;
+    display: block;
+    padding: 20px 15px;
+    font-size: 16px;
+
+}
+
+.menu>li:hover .sub_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container {
+    display: flex;
+    margin-top: 80px;
+}
+
+.left {
+    width: 25%;
+    max-width: 350px;
+    padding: 0 15px;
+}
+
+.right {
+    width: 75%;
+    padding: 0 15px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.card_title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Chi duoc css o the a */
+.card ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/* Selector den phan tu con bat ky 
+.card ul li:nth-child(2) a {
+    color: aqua;
+}*/
+
+/* Selector den phan tu con thu tu chan: 2n  || le: 2n+1 
+.card ul li:nth-child(2n+1) a {
+    color: blue;
+}*/
+
+.card_price {
+    margin-top: 40px;
+}
+
+.card_price ul li {
+    padding: 15px;
+}
+
+/* Before va after trong css            |       Bo sung cach hien thi cua the html */
+.card_price ul li input {
+    display: none;
+}
+
+.card_price ul li label {
+    display: block;
+    padding-left: 50px;
+    position: relative;
+}
+
+
+.card_price ul li label::before {
+    content: "";
+    /* Content se hien thi truoc tat ca label */
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    left: 0;
+    top: -3px;
+}
+
+/* 
+    1. Su kien checked cua check box || radio                               |
+    2. Selector den phan tu cung cap && nam ke ngay sau no                  |           Su dung "+"   
+    Befor va after ho tro rat nhieu trong cac cach hien thi vd: thanh truow bat che do may bay tren iphone
+*/
+.card_price ul li input:checked+label::after {
+    content: "";
+    width: 8px;
+    height: 14px;
+    display: block;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: absolute;
+    top: -2px;
+    left: 7px;
+    /* Xoay phan tu html */
+    transform: rotate(45deg);
+}
+
+.card_price ul li input:checked+label::before {
+    border-color: black;
+}
+
+#category_name {
+    font-size: 28px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.list_products {
+    display: flex;
+    /* Cho phep phan tu con xuong dong khi tong width con > width cha
+        Mac dinh la nowrap
+    */
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.item {
+    width: 25%;
+    padding: 0 15px;
+    /*
+    box-sizing: content-box |   Kich thuoc phan tu html la phan content
+    box-sizing: border-box  |   Kich thuoc phan tu html la phan border
+    */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.product .img {
+    display: block;
+    /* overflow             |   Xu ly noi dung thua */
+    overflow: hidden;
+}
+
+.product .img:hover img {
+    /* Tang giam kich thuoc phan tu n lan */
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.description p {
+    /* Khoang cac giua cac tu */
+    /* word-spacing: 1px; */
+
+    /* Chieu cao dong text, thuong la 23px*/
+    line-height: 23px;
+
+    /* Khoang cach giua cac chu cai */
+    /* letter-spacing: 1px; */
+
+    /* Hien thi 1 dong va dau "..." neu vuot qua
+        nowrap: 0 xuong dong >< wrap
+        text-overflow: ellipsis => Dau 3 cham
+    */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 
+    MO TA OVERFLOW
+    overflow: scroll        |       Hien thi thanh scroll ben phai va o duoi
+              auto          |       Content vuot qua thi moi hien thi thanh scroll
+
+*/
+
+/* Buoi sua cat giao dien figma */
