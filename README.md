@@ -41,7 +41,7 @@ Nội dung học được chia thành các buổi/module sau, tập trung vào v
 
 1.  **Clone Repository:**
     ```bash
-    git clone [Dán link repository của bạn tại đây]
+    git clone https://github.com/khanhtom110/Devpro-Web-Interface-UI
     ```
 2.  **Mở bằng VS Code:**
     ```bash
