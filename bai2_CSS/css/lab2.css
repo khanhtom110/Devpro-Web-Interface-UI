@@ -176,6 +176,11 @@ nav {
         visibility                      |           An su kien con tro chuot di
         transition                      |           Thoi gian chuyen dong
     */
+    /* 
+    O day dat opacity = 0 de cho no an di, nhung no van co the tuong tac duoc => Nen can visibility
+    Transition (chuyen dong) neu dat o hover thi no se chi co hieu luc luc di chuot vao, sau do di chuot ra thi se khong muot ma.
+    Dat o day thi se auto moi luc deu chuyen dong
+    */
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
@@ -262,7 +267,7 @@ nav {
     position: relative;
 }
 
-
+/* Ve o vuong */
 .card_price ul li label::before {
     content: "";
     /* Content se hien thi truoc tat ca label */
@@ -365,4 +370,4 @@ nav {
 
 */
 
-/* Buoi sua cat giao dien figma */
+/* Buoi sau sua cat giao dien figma */
