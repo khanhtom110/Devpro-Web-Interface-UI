@@ -1,0 +1,208 @@
+/* 
+    light: 300
+    regular: 400
+    medium: 500
+    semibold: 600
+    bold: 700
+*/
+@font-face {
+    /* Dat ten font */
+    font-family: "Poppins";
+    /* Khai bao duong dan den font mong muon */
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins/Poppins-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    font-family: "Poppins";
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.container_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_header {
+    background-color: #000000;
+    padding: 12px 0;
+    color: #FAFAFA;
+}
+
+.top_content {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    width: calc(100% - 78px);
+    text-align: center;
+}
+
+.top_header a {
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 8px;
+    color: #ffffff;
+}
+
+.language select {
+    border: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    width: 78px;
+    height: 24px;
+}
+
+.language select:focus {
+    outline: unset;
+}
+
+.container_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 24px;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.menu li a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 48px;
+}
+
+/* Cho phan tu cuoi cung khong margin-right */
+.menu li:last-child a {
+    margin-right: 0;
+}
+
+.menu li a.active {
+    border-bottom: 1px solid #000000;
+}
+
+.content_right {
+    display: flex;
+    align-items: center;
+}
+
+.form_search img {
+    align-items: center;
+}
+
+.form_search {
+    position: relative;
+}
+
+.form_search input {
+    height: 38px;
+    width: 243px;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    /* De lam gi ??? */
+    box-sizing: border-box;
+    padding: 7px 12px 7px 20px;
+    outline: unset;
+}
+
+.form_search button {
+    position: absolute;
+    left: 207px;
+    top: 7px;
+    border: 0;
+    font-size: 15px;
+    outline: unset;
+}
+
+.form_search i {
+    color: #000000;
+}
+
+.product_favories {
+    font-size: 23px;
+    display: inline-block;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.cart {
+    display: inline-block;
+    font-size: 23px;
+}
+
+main {
+    border-top: 1px solid #000000;
+}
+
+.slider {
+    display: flex;
+    padding-top: 40px;
+}
+
+.menu_left {
+    width: 223px;
+    box-sizing: border-box;
+    padding-right: 16px;
+}
+
+.list_banner {
+    width: calc(100% - 233px);
+    border-left: 1px solid #000000;
+    box-sizing: border-box;
+    padding-left: 45px;
+}
