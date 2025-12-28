@@ -5,6 +5,10 @@
     semibold: 600
     bold: 700
 */
+
+/* import font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @font-face {
     /* Dat ten font */
     font-family: "Poppins";
@@ -205,4 +209,212 @@ main {
     border-left: 1px solid #000000;
     box-sizing: border-box;
     padding-left: 45px;
+
+    /* De css vi tri cua thanh truot */
+    position: relative;
+}
+
+.custom-dots-class {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    position: absolute;
+    width: 892px;
+    justify-content: center;
+    bottom: 11px;
+    /* left: 45px; */
+    align-items: center;
+
+}
+
+.custom-dots-class li {
+    margin-right: 11px;
+}
+
+.custom-dots-class li:last-child {
+    margin-right: 0;
+}
+
+.custom-dots-class li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #7D8184;
+    box-sizing: border-box;
+    color: #7D8184;
+    overflow: hidden;
+
+
+}
+
+.custom-dots-class .slick-active button {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
+    background-color: #DB4444;
+    color: #DB4444;
+}
+
+.today {
+    margin-top: 140px;
+
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #DB4444;
+    padding-left: 36px;
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    width: 20px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    background-color: #DB4444;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+}
+
+.row {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.desc {
+    font-size: 36px;
+    /* La semibold */
+    font-weight: 600;
+    color: #000000;
+    line-height: 48px;
+    font-family: "Inter";
+    display: flex;
+}
+
+.desc .countdown {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 87px;
+}
+
+.desc .countdown div {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Inter";
+    line-height: 30px;
+}
+
+.desc .countdown div span {
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 18px;
+
+}
+
+.desc .countdown>span {
+    /* Do span k margin duoc */
+    display: inline-block;
+    margin: 0 17px;
+    color: #DB4444;
+}
+
+.list_product {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 40px -15px 0px;
+}
+
+.list_product .item {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.list_product .item .img-prd {
+    display: block;
+    position: relative;
+}
+
+.btn-slick {
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    opacity: 100%;
+    border: 0;
+    text-align: center;
+    background-color: #F5F5F5;
+    font-size: 18px;
+}
+
+.discount {
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #DB4444;
+    text-align: center;
+    line-height: 26px;
+    color: #fafafa;
+    font-size: 12px;
+    font-weight: 400;
+    top: 12px;
+    left: 12px;
+}
+
+.favorite,
+.view_more {
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 34px;
+    font-size: 18px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.view_more {
+    top: 57px;
+}
+
+.img-prd button {
+    width: 100%;
+    border: 0;
+    height: 41px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 500;
+    position: absolute;
+    bottom: -61px;
+    left: 0;
+    background-color: #000000;
+    z-index: -1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.content_product {
+    background-color: #ffffff;
+}
+
+.img-prd:hover button {
+    bottom: 0;
+    z-index: 1;
 }
