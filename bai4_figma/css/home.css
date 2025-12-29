@@ -158,10 +158,10 @@ body {
     width: 243px;
     border-radius: 4px;
     background-color: #F5F5F5;
-    /* De lam gi ??? */
     box-sizing: border-box;
     padding: 7px 12px 7px 20px;
     outline: unset;
+    border: none;
 }
 
 .form_search button {
@@ -171,10 +171,12 @@ body {
     border: 0;
     font-size: 15px;
     outline: unset;
+    background-color: #F5F5F5;
 }
 
 .form_search i {
     color: #000000;
+
 }
 
 .product_favories {
@@ -202,6 +204,24 @@ main {
     width: 223px;
     box-sizing: border-box;
     padding-right: 16px;
+
+}
+
+.menu_left ul {
+    list-style-type: none;
+
+}
+
+.menu_left ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.menu_left ul li {
+    display: flex;
+    justify-content: space-between;
 }
 
 .list_banner {
@@ -214,6 +234,43 @@ main {
     position: relative;
 }
 
+.list_banner .item_slider {
+    position: relative;
+}
+
+.list_banner .item_slider .voucher {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    width: 294px;
+    position: absolute;
+    top: 127px;
+    left: 64px;
+}
+
+.list_banner .item_slider>a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    top: 269px;
+    left: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.list_banner .item_slider>a>div {
+    padding: 2px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
 .custom-dots-class {
     display: flex;
     margin: 0;
@@ -223,7 +280,7 @@ main {
     position: absolute;
     width: 892px;
     justify-content: center;
-    bottom: 11px;
+    bottom: 0px;
     /* left: 45px; */
     align-items: center;
 
