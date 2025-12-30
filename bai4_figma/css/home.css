@@ -610,3 +610,13 @@ main {
     background-color: #DB4444;
     border-radius: 4px;
 }
+
+.list_best_selling {
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.item_best_selling {
+    width: 270px;
+}
