@@ -402,11 +402,83 @@
         </div>
         <!-- End Flash sales product -->
 
-
+        <div class="line"></div>
 
         <!-- Start Categories -->
+        <div class="categories">
+            <div class="title">Categories</div>
+            <div class="row row_category">
+                <div class="desc">
+                    Browse By Category
+                </div>
+                <div class="nav_category">
 
+                </div>
+            </div>
+            <div class="list_category">
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-CellPhone.png" alt="">
+                        Phones
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-Computer.png" alt="">
+                        Computers
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-SmartWatch.png" alt="">
+                        SmartWatch
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-Camera.png" alt="">
+                        Camera
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-Headphone.png" alt="">
+                        HeadPhones
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-Gamepad.png" alt="">
+                        Gaming
+                    </a>
+                </div>
+                <!-- end categories -->
+                <!-- start categories -->
+                <div class="item_category">
+                    <a href="#" class="img_category">
+                        <img src="./images/Category-Gamepad.png" alt="">
+                        Gaming
+                    </a>
+                </div>
+                <!-- end categories -->
+            </div>
+        </div>
         <!-- End Categories -->
+
+        <div class="line"></div>
+
+
     </main>
     <footer></footer>
 
@@ -439,6 +511,17 @@
             // Thay doi vi tri nut previous, next
             'appendArrows': $('.next_prev_slick'),
             // Thay doi cach hien thi cua button previous, next
+            'prevArrow': '<button type="button" class="btn-slick btn-slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+            'nextArrow': '<button type="button" class="btn-slick btn-slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
+        });
+
+        $('.list_category').slick({
+            'autoplay': true,
+            'dots': false,
+            'arrows': true,
+            'slidesToShow': 6,
+            'slidesToScroll': 1,
+            'appendArrows': $('.nav_category'),
             'prevArrow': '<button type="button" class="btn-slick btn-slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
             'nextArrow': '<button type="button" class="btn-slick btn-slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
         });
