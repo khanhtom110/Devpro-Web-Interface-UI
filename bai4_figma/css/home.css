@@ -416,6 +416,7 @@ main {
     text-align: center;
     background-color: #F5F5F5;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .discount {
@@ -685,4 +686,41 @@ main {
 
 .our_product {
     margin: 0 135px 140px;
+}
+
+.content_explore>h3 {
+    margin-bottom: 8px;
+}
+
+.content_explore>span:nth-child(2) {
+    font-size: 16px;
+    font-weight: 500;
+    color: #DB4444;
+}
+
+.content_explore>span:nth-child(3) {
+    color: #FFAD33;
+    margin-left: 8px;
+}
+
+
+.content_explore>span:nth-child(3)>span {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 50%;
+    color: #000000;
+    margin-left: 8px;
+}
+
+.list_explore {
+    margin-top: 60px;
+    margin-right: -40px;
+}
+
+.item_explore {
+    margin-bottom: 60px;
+}
+
+.our_product>.view_all_product>button {
+    margin-top: 0px;
 }
