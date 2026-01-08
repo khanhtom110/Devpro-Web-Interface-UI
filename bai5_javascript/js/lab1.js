@@ -1,0 +1,1 @@
+console.log("Nhin gi ma nhin");

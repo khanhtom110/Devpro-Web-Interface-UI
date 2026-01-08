@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Câu lệnh điều kiện và vòng lặp</title>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" name="keyword" value="">
+        <button type="submit" onclick="caculate()">Thực hiện phép tính</button>
+        <button type="submit" onclick="kiemTraBanPhim()">Kiem tra ban phim</button>
+        <button type="submit" onclick="kiemTraSoNguyenTo()">Kiem tra so nguyen to</button>
+    </div>
+    <script>
+        // Định nghĩa hàm trong js
+        function caculate() {
+            var input = document.querySelector('input');
+            var number = input.value;
+            if (number == '') {
+                alert('Vui long nhap so can kiem tra');
+            } else if (number % 2 == 0) {
+                alert('So ' + number + ' la so chan');
+            } else {
+                alert('So ' + number + ' la so le');
+            }
+        }
+
+        function kiemTraBanPhim() {
+            /*
+            Câu lệnh điều kiện switch case
+            switch(Biến){
+                case value1:
+                    ...
+                    break;
+                case value2:
+                    ...
+                    break;
+                default:
+                    ...
+            }
+
+            - Switch case thực hiện so sánh bằng tuyệt đối
+            - Sử dụng khi biết trước các mảng giá trị rồi
+            */
+            var input = document.querySelector('input');
+            var str = input.value;
+            switch (str) {
+                case 'a':
+                    alert('Ban go phim a');
+                    break;
+                case 'b':
+                    alert('Ban go phim b');
+                    break;
+                case 'c':
+                    alert('Ban go phim c');
+                    break;
+                default:
+                    alert('Phim gi zay troi');
+
+            }
+        }
+
+        function kiemTraSoNguyenTo() {
+            /*
+            Vòng lặp for:
+                for(câu lệnh khởi tạo vòng lặp; câu lệnh điều kiện; bước nhảy){
+                    ...
+                }
+            */
+            var input = document.querySelector('input');
+            var number = input.value;
+            var res = true;
+            if (number < 2) {
+                alert('So ' + number + ' khong la so nguyen to');
+            } else {
+                for (var i = 2; i < number; i++) {
+                    if (number % i == 0) {
+                        res = false;
+                    }
+                }
+            }
+            if (res == 1) {
+                alert('So ' + number + ' la so nguyen to');
+            } else {
+                alert('So ' + number + ' khong la so nguyen to');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Khai báo biến trong js</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <script>
+        // Cú pháp khai báo biến trong js
+        var str = 'Day la chuoi string';
+        var numberA = 10;
+        var numberB;
+        console.log(typeof (numberB));
+        /*
+        Quy tac khai bao bien:
+        1. Bắt đầu bằng chữ cái hoặc _ hoặc $
+        2. Tên biến phải là duy nhất trong vùng hoạt động
+        3. Tên biến phân biệt chữ hoa chữ thường
+        */
+        var Str = 'string 2';
+        // Kiểu dữ liệu: số (int, float), chuỗi (String), boolen (true, false), mảng (array), object
+        // Cách xác định kiểu dữ liệu chuỗi: Giá trị được đặt tring '' hoặc ""
+        /*
+        Kiểu dữ liệu của biến được xác định dựa vào giá trị nó được gán
+        VD: numberA -> Là kiểu number
+            numberB -> undefined (Không xác định)
+
+        */
+
+        /* 
+        Các phép toán trong lập trình
+        1. Phép cộng (+): 2 số hạng đều phải có kiểu dữ liệu kiểu số
+        */
+        numberB = 5
+        var sum = numberA + numberB;
+        // 2. Phép trừ (-)
+        var hieu = numberA - numberB;
+        // 3. Phép nhân (*)
+        numberA * numberB;
+        // 4. Phép chia hết (/)
+        10 / 3; //kq: 3.3333333333333335 (max 17 số sau dấu thập phân)
+        // 5. Phép chia lấy số dư (%)
+        10 % 3; //kq: 1
+        // 6. phép cộng 1 đơn vị hoặc trừ 1 đơn vị
+        numberA++;
+
+        // Phép cộng chuỗi: 1 trong 2 số hạng là kiểu dữ liệu chuỗi
+        str += '. ' + Str;
+        // alert(str);
+
+
+        // Các phép so sánh
+        // 1. Phép so sánh >, >=, <, <=
+        var ss = numberA > numberB //true
+        // 2. Phép so sánh bằng
+        // - Loại 1: so sánh bằng tương đối "==" (so sánh về giá trị 2 phần tử, không so sánh về kiểu dữ liệu)
+        // - Loại 2: so sánh bằng tuyệt đối "===" (cả 2)
+
+        var bool = true;
+        var res = 1 == bool; //kq: true
+        var tmp = '10';
+        var numberC = 10;
+        var res = tmp == numberC; // True
+
+        /*
+        3. Phép so sánh khác
+        - Loại 1: so sánh khác tương đối "!=" (so sánh khác về giá trị, không so sánh về kiểu dữ liệu)
+        - Loại 2: so sánh khác tuyệt đối "!==" (cả 2)
+
+        4. Phép phủ định (!)
+        */
+
+
+        // Phép kết hợp các mệnh đề điều kiện
+        /*
+        1. Phép kết hợp điều kiện (ký hiệu &&)
+        - Cả mệnh đề điều kiện trả về true khi: tất cả điều kiện kết hợp đều đúng
+        - False khi: 1 trong các điều kiện sai
+
+        2. Phép kết hợp hoặc (ký hiệu: ||)
+        - Cả mệnh đề đều đúng khi: 1 trong các điều kiện kết hợp đúng
+        - Cả mệnh đề sai khi: tất cả các điều kiện kết hợp sai
+        */
+
+    </script>
+</body>
+
+</html>
