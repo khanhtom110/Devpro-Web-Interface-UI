@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Các hàm và phương thức JavaScript hỗ trợ</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        /*
+                        HAM VA PHUONG THU XU LY CHUOI
+        CHU Y: JavaScript coi chuoi la mang tuan tu
+        */
+        //    Dem so luong ky tu
+        var str = 'JavaScript cac ham xu ly chuoi. JavaScript buoi 2';
+        document.write('<h1>' + str + '</h1>')
+        var count = str.length;
+        // Tim kiem chuoi A trong chuoi str
+        /*
+        1. indexOf va lastIndexOf: Tim kiem chuoi va tra ve vi tri cua chuoi do
+        indexOf: tra ve vi tri dau tien
+        lastIndexOf: tra ve vi tri cuoi cung
+        */
+        var index = str.indexOf('xu ly chuoi');
+        document.write('Vi tri cua chuoi la: ' + index);
+        document.write('<br>');
+        //Ham tim kiem search: Nguyen ly hoat dong gan giong indexOf nhung co the su dung regular expression
+        var index2 = str.search(/JavaScript/);
+        document.write('Vi tri cua chuoi la: ' + index2);
+        document.write('<br>');
+
+        /* Ham cat chuoi:
+        1. Ham str.slice(start, end), str.substring(start, end)
+        => Cat chuoi tu vu tri start den vi tri truoc end
+        2. Ham substr(start, length)
+        => Cat tu vi tri start va lay length ky tu
+        => Bo length neu cat den het
+        */
+        var dotIndex = str.indexOf('.');
+        // str = str.slice(0, dotIndex + 1);
+        // document.write(str);
+        // document.write('<br>');
+
+        var str3 = str.substring(dotIndex + 2);
+        // document.write(str3);
+
+        // Ham thay the chuoi A thanh chuoi B
+        // str.replace('chuoi tim kiem', 'chuoi thay the')
+        var str4 = str.replace(/JavaScript/g, 'JS'); //g la global
+        document.write(str4);
+
+        //Chuyen mot chuoi thanh mang tuan tu
+        //str.split('ky tu'): khi gap ky tu thi se tach thanh 1 phan tu trong mang
+        var array = str.split(" ");
+        console.log(str);
+        console.log(array);
+    </script>
+</body>
+
+</html>

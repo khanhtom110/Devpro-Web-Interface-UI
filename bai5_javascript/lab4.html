@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hàm và tham số</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" name="keyword" value="">
+        <button type="submit" onclick="kiemTraSoNguyenTo()">Kiem tra so nguyen to</button>
+    </div>
+
+    <script>
+        /*
+        QUY TAC DAT TEN HAM
+        1. Ten ham bat dau la chu cai hoac _ hoac $
+        2. Ten ham phai la duy nhat
+        3. Ten ha phan biet chu hoa chu thuong
+        */
+
+        // Ham co tham so va co gia tri tra ve
+        function kiemTraSoNguyenTo(number) {
+            if (number < 2) {
+                return false;
+            } else {
+                var bool = true;
+                for (var i = 2; i < number; i++) {
+                    if (number % i == 0) {
+                        bool = false;
+                        break;
+                    }
+                }
+                return bool;
+            }
+        }
+
+        document.querySelector('button').addEventListener('click', function () {
+            var number = document.querySelector('input').value;
+            // Cach goi ham co tham so va co du lieu tra ve
+            var isSoNguyenTo = kiemTraSoNguyenTo(number);
+            if (isSoNguyenTo == true) {
+                alert('So ' + number + ' la so nguyen to');
+            } else {
+                alert('So ' + number + ' khong la so nguyen to');
+            }
+        });
+
+        // Ham co tham so va khong co du lieu tra ve
+        function tinhTong(a, b) {
+            var tong = a + b;
+            document.write('Tong a+b = ' + tong);
+        }
+        tinhTong(35, 1);
+
+        /*
+        DU LIEU MẢNG:
+        1. Dinh nghia mang tuan tu:
+            La mang cac phan tu duoc danh dau tu 0 -> n (n la so nguyen duong)
+        */
+        var array1 = ['Nguyen Van A', 'Nguyen Van B', 1, 2, 3, false];
+        var count = array1.length;
+        console.log(array1);
+        console.log('Mang [' + array1 + '] co ' + count + ' phan tu');
+        // Thay doi gia tr cua 1 phan tu
+        array1[5] = true;
+        // Them moi 1 pha tu trong mang
+        array1[6] = 'newValue';
+        array1[array1.length] = 'newValue';
+        // Xoa 1 phan tu trong mang splice(index, 1); trong do 1 la xoa 1 phan tu tinh tu index sang ben phai
+        array1.splice(0, 3);
+        /*
+        2. Dinh nghia mang bat tuan tu:
+            La mang cac phan tu trong mang duocj danh dau bang text hoac ky tu bat ky
+        */
+        var array2 = new Array();
+        // Them moi phan tu vao mang
+        array2['hoTen'] = 'Nguyen Van A';
+        array2['tuoi'] = '18';
+        array2['gioiTinh'] = true;
+        console.log(array2);
+        // Thay doi gia tr
+        array2['tuoi'] = '16';
+        // Khong the xoa duoc phan tu trong mang
+
+
+        /*
+        DOI TUONG TRONG JAVASCRIPT
+        */
+        // Dinh nghia doi tuong
+        var user = {
+            hoTen: 'Nguyen Van A',
+            tuoi: 18,
+            diemToan: 10,
+            diemVan: 8,
+            description: 'gai 18 tuoi',
+            getUser: function () {
+                return this.user;
+            },
+            setDiemToan: function (newDiemToan) {
+                this.diemToan = newDiemToan;
+            },
+            getDiemToan: function () {
+                return this.diemToan;
+            }
+        }
+    </script>
+</body>
+
+</html>

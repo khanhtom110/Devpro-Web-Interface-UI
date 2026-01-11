@@ -5,7 +5,7 @@
     <title>Câu lệnh điều kiện và vòng lặp</title>
 </head>
 
-<body>
+<body style="background-color: black;">
     <div class="form">
         <input type="text" name="keyword" value="">
         <button type="submit" onclick="caculate()">Thực hiện phép tính</button>
@@ -70,22 +70,65 @@
             */
             var input = document.querySelector('input');
             var number = input.value;
-            var res = true;
+            var bool = true;
             if (number < 2) {
                 alert('So ' + number + ' khong la so nguyen to');
             } else {
-                for (var i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        res = false;
+                // for (var i = 2; i < number; i++) {
+                //     if (number % i == 0) {
+                //         res = false;
+                //     }
+                // }
+
+                // Vòng lặp while (điều kiện kết thúc vòng lặp)
+                var i = 2;
+                // while (i < number) {
+                //     if (number%i==0) {
+                //         bool = false;
+                //     }
+                //     i++;
+                // }
+
+                // Vòng lặp do { } while(điều kiện kết thúc) 
+                do {
+                    if (number % i == 0 && number > 2) {
+                        bool = false;
                     }
-                }
+                    i++;
+                } while (i < number);
             }
-            if (res == 1) {
+            if (bool == 1) {
                 alert('So ' + number + ' la so nguyen to');
             } else {
                 alert('So ' + number + ' khong la so nguyen to');
             }
         }
+
+        /* Câu lệnh can thiệp vòng lặp
+        1. Break:
+            Kết thúc tại thời điểm thỏa mãn điều kiện
+        2. Continue:
+            Bỏ qua các vòng lặp thỏa mãn điều kiện để chạy đến vòng lặp tiếp theo
+        */
+
+        // Tim cac so chan chia het cho 5 nhung khong chia het cho 3
+        // var numberA = 100;
+        // var str = '';
+        // for (var i = 2; i <= numberA; i++) {
+        //     if (i % 2 > 0) {
+        //         continue;
+        //     }
+        //     if (i % 3 == 0) {
+        //         continue;
+        //     }
+        //     if (i % 5 == 0) {
+        //         str += i + ',';
+        //     }
+        // }
+        // alert(str);
+
+
+
     </script>
 </body>
 
