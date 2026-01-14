@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bai 1 - Kiem tra so chinh phuong</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <input type="text" placeholder="Nhap n">
+    <button class="">Kiem tra</button>
+    <script>
+        var btn = document.querySelector("button");
+        btn.addEventListener('click', function () {
+            var a = document.querySelector('input').value;
+            var bool = kiemTra(a);
+            if (a < 1) {
+                alert('So ' + a + ' khong la so chinh phuong');
+
+            } else if (bool) {
+                alert('So ' + a + ' la so chinh phuong');
+            } else {
+                alert('So ' + a + ' khong la so chinh phuong');
+            }
+        });
+        function kiemTra(a) {
+            for (var i = 1; i <= a; i++) {
+                if (i * i == a) {
+                    return true;
+                }
+                if (i * i > a) {
+                    return false;
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
