@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .form_login {
+            max-width: 500px;
+            padding: 30px;
+            margin: 80px auto;
+            box-shadow: 0 0 5px #cccccc;
+            border-radius: 5px;
+        }
+
+        .row {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-control {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            height: 35px;
+            padding: 5px 15px;
+        }
+
+        .form-control:focus {
+            outline: unset;
+        }
+
+        #eyes {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_login">
+        <h2 id="title">Login Account</h2>
+        <form action="" method="POST">
+            <div class="row">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" value="" field-name="email">
+                <span class="error" id="error_email"></span>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <div style="position: relative;">
+                    <input type="password" name="password" class="form-control" value="" field-name="mat khau">
+                    <i id="eyes" class="fa-solid fa-eye-slash"></i>
+                    <span class="error" id="error_password"></span>
+                </div>
+            </div>
+            <button type="button">Dang nhap</button>
+        </form>
+    </div>
+
+    <script>
+        // Co selector den doi tuong html
+        // Co 5 cach selector
+        // 1. Su dung id => Tra ve 1 doi tuong cu the
+        var objTitle = document.getElementById('title');
+        // 2. Su dung class => Tra ve 1 list cac the html co cung ten class
+        var objs = document.getElementsByClassName('form-control');
+        // 3. Su dung ten th html => Tra ve 1 list cac the html co cung ten
+        var objs2 = document.getElementsByTagName('label');
+
+        // Selector cua css
+        // 1. querySelector() -> Luon tra ve mot doi tuong cu the dau tien no tim thay
+        // Cu phap: document.querySelector(css selector)
+        var obj = document.querySelector('.form-control');
+        // 2. querySelectorAll -> Luon tra ve dang list doi tuong html ke ca la id
+        // Cu phap: document.querySelectorAll(css selector)
+        var obj3 = document.querySelectorAll('#title');
+
+        // Cac ham va phuong thuc tac dong len doi tuong html
+        // Chu y: Cac ham phuong thuc su dung voi mot doi tuong html cu the (tuc la getElementById hoac querySelector)
+        // 1. Lấy nội dung thẻ html, thay đổi hoặc thêm mới nội dung
+        // Lay noi dung text va thay doi noi dung text
+        var contentH2 = objTitle.innerHTML;
+        // alert(contentHtml); //Login Account
+        // Thay doi
+        objTitle.innerHTML = 'Dang nhap tai khoan';
+        // Lay noi dung va thay doi noi dung bao gom html
+        var contentHtml = objTitle.outerHTML;
+        // alert(contentHtml); //<h2 id="title">Dang nhap tai khoan</h2>
+        // Thay doi
+        objTitle.outerHTML = '<h1 id="title"><center>Dang nhap</center></h1>';
+
+        /* Cac su kien javascript
+            1. Su kien chuot
+             - onclick -> click chuot
+             - ondbclick -> db click
+             - onmouseover -> con tro chuot nam tren doi tuong html
+             - onmouseout -> con tro chuot roi khoi doi tuong html
+             - onmouseup -> click va nhả phim chuot nảy lên
+             - onmousedơn -> click va nhả phim chuot nảy xuống
+            2. Su kien ban phim
+             - onkeyup -> nhấn phím và phỉm nảy lên
+             - onkeydown -> nhấn phím và phỉm xuống
+             - onkeypress -> hoàn thành thao tác go ban phim
+             - onchange -> su dung khi thay doi gia tri (thuong dung cho radio, checkbox, select)
+            3. Su kien onload -> dung the body phat hien trang da load xong chưa
+        */
+        document.querySelector('#eyes').addEventListener('click', function () {
+            // Lay gia tri thuoc tinh the html
+            var objPassword = document.querySelector('input[name="password"]');
+            var type = objPassword.getAttribute('type');
+            var objEyes = document.querySelector('#eyes');
+            console.log(objEyes);
+
+            if (type == 'password') {
+                objPassword.setAttribute('type', 'text');
+                objEyes.setAttribute('class', "fa-solid fa-eye");
+            } else {
+                objPassword.setAttribute('type', 'password');
+                objEyes.setAttribute('class', "fa-solid fa-eye-slash");
+            }
+        });
+
+        // Them moi hoac thay doi gia tri thuoc tinh css
+        document.querySelector('center').style.fontFamily = 'Arial';
+        // Lay gia tri css
+        var font_family = document.querySelector('center').style.fontFamily; // Arial
+        /*
+        Quy tac ten thuoc tinh css
+         - Cac ten thuoc tinh css co tu 2 chu tro len noi voi nhau boi dau gach noi thi minh se bo dau gach noi di va chu cai sau dau gach noi viet hoa
+        */
+
+        // Cach lay gia tri the trong form
+        document.querySelector('button').addEventListener('click', function () {
+            var objs = document.getElementsByClassName('form-control');
+
+            for (var i = 0; i <= objs.length; i++) {
+                var obj = objs[i];
+                // Lay gia tri input
+                var val = obj.value;
+                // Lay ten cua input: email, password
+                var inputName = obj.getAttribute('name');
+                var idError = 'error_' + inputName;
+                var objError = document.getElementById(idError);
+                if (val == '') {
+                    // objError.outerHTML = '<i class="fa-regular fa-circle-question"></i>'; -- Lam chua ra:)))
+                    objError.innerHTML = 'Vui long dien thong tin cua ' + obj.getAttribute('field-name');
+                } else {
+                    objError.innerHTML = '';
+                }
+            }
+        });
+
+        // Mot so ham hay su dung
+        // 1. Ham chay sau bao nhieu thoi gian
+        // setTimeout(function () {
+        //     document.querySelector('body').style.backgroundColor = 'gray';
+        //     document.querySelector('.form_login').style.backgroundColor = 'white';
+        // }, 3000);
+        // 2. Ham setInterval() -> Chay lien tuc, theo chu ky bao nhieu giay
+        var arrayColor = ['red', 'blue', 'pink', 'orange', 'brown'];
+        var i = 0;
+        setInterval(function () {
+            if (i == arrayColor.length) {
+                i = 0;
+            }
+            document.querySelector('body').style.backgroundColor = arrayColor[i];
+            document.querySelector('.form_login').style.backgroundColor = 'white';
+            i++;
+        }, 3000);
+    </script>
+</body>
+
+</html>

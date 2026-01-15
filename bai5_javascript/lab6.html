@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hàm và phương thức hỗ trợ xử lý dữ liệu kiểu số</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+
+
+    <script>
+        var numberA = 10;
+        var strA = numberA.toString();
+        var numberB = 3.3333333;
+        // Ham lam tron so thap phan number.toFixed(n) => n so sau dau . thap phan
+        numberB = numberB.toFixed(2); //3.33
+        // Chuyển đổi các kiểu dữ liệu khác về kiểu số Number(content)
+        var numberC = Number(true); //convert kieu tu boolean ve number
+        //Chuyen doi kieu du lieu khac hoac kieu so thuc ve kieu so nguyen parseInt(content)
+        console.log(numberB);
+        var numberE = parseInt(numberB);
+        console.log(numberE);
+        //Chuyen doi kieu du lieu ve kieu so thuc parseFloat(content)
+        var strB = '4.567';
+        console.log(strB);
+        numberB = parseFloat(strB);
+        console.log(numberB);
+
+        // PHUONG THUC TOAN HOC
+        // 1. Neu la so thap phan luon lam tron len 1 don vi Math.ceil(number);
+        var soA = 6.0000001;
+        soA = Math.ceil(soA);
+        console.log(soA); // 7
+        // 2. Neu la so thap phan luon lam tron xuong Math.floor(number);
+        var soB = 9.999999;
+        soB = Math.floor(soB);
+        console.log(soB); // 9
+        // 3. Neu la so thap phan luon lam tron theo quy tac toan hoc, neu >=5 thi lam trong len, <5 thi lam tron xuong Math.round(number);
+        var soC = 4.5;
+        soC = Math.round(soC);
+        console.log(soC); //5
+
+
+
+    </script>
+</body>
+
+</html>
