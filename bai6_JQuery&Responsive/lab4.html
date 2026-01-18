@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>lab4</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+
+<body>
+    <fieldset style="width: 300px; margin: auto;">
+        <legend>Cong hai so</legend>
+        <table cellpadding="5">
+            <tr>
+                <td>So 1</td>
+                <td><input type="number" id="so1"></td>
+            </tr>
+            <tr>
+                <td>So 2</td>
+                <td><input type="number" id="so2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" id="btn" value="Thuc hien">
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;" class="show"></h1>
+    </fieldset>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                // Lay gia tri cua id=so1
+                var s1 = parseInt($('#so1').val());
+                // Lay gia tri cua id=so1
+                var s2 = parseInt($('#so2').val());
+                var sum = s1 + s2;
+                // Xuat gia tri ra the html co class=show
+                $('.show').html(s1 + " + " + s2 + " = " + sum);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

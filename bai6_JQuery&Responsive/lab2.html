@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2</title>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+
+<body>
+    <input type="button" value="click">
+    <script>
+        $(document).ready(function () {
+            /*
+             - Tu jquery co the tac dong vao the html qua 1 so cach:
+             $("tenthe").sukien(function(){});
+             $(".tenclass").sukien(function(){});
+             $("#tenid").sukien(function(){});
+             - Cac su kien thuong dung cua the html
+                + Click: click 1 lan
+                + dbclick: click 2 lan
+                + change: su dung cho the select khi thay doi option
+        
+            */
+            //    Bat su kien click cua the html co ten la input
+            $("input").click(function () {
+                alert("Click vao btn input");
+            }); // Ket thuc dong lenh phai co dau ";"
+        });
+    </script>
+</body>
+
+</html>

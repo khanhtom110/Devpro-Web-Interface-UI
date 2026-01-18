@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab9</title>
+
+</head>
+
+<body>
+    <style>
+        .xanh {
+            background-color: green;
+        }
+
+        .do {
+            background-color: red;
+        }
+
+        .tim {
+            background-color: purple;
+        }
+
+        .vang {
+            background-color: yellow;
+        }
+
+        div {
+            height: 100px;
+        }
+
+        /* Can trai cac khoi len cung 1 hang */
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            float: left;
+            width: 25%;
+        }
+
+        /* Phat hien co man hinh 1400px*/
+        @media all and (max-width: 1400px) {
+            .box1 {
+                width: 100%;
+            }
+
+            .box2,
+            .box3,
+            .box4 {
+                width: 33%;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            .box1,
+            .box2,
+            .box3 {
+                width: 33%;
+            }
+
+            .box4 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .box1,
+            .box2 {
+                width: 50%;
+            }
+
+            .box3,
+            .box4 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .box1 {
+                width: 100%;
+            }
+
+            .box2 {
+                width: 100%;
+            }
+
+            .box3 {
+                width: 100%;
+            }
+
+            .box4 {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="box1 xanh">box 1</div>
+    <div class="box2 do">box 2</div>
+    <div class="box3 tim">box 3</div>
+    <div class="box4 vang">box 4</div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

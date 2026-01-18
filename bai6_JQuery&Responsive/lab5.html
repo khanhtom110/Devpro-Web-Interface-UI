@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5</title>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+</head>
+
+<body>
+    <fieldset style="width: 300px; margin: auto;">
+        <legend>jquery</legend>
+        <input type="text" id="txt" style="outline: none;">
+        <input type="button" id="btn" value="Click">
+        <h1 style="text-align: center;" class="show"></h1>
+    </fieldset>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                var str = $('#txt').val();
+                if (str == "") {
+                    // set gia tri vao thuoc tinh style cua id=txt
+                    $('#txt').attr("style", "border:1px solid red; outline: none;");
+                } else {
+                    // remove gia tri trong thuoc tinh style cua id=txt
+                    $('#txt').removeAttr("style");
+                    // Set gia tri vao class=show
+                    $('.show').html(str);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

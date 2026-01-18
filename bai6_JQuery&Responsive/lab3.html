@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3</title>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+
+<body>
+    <fieldset style="width: 300px; margin: auto;">
+        <legend>
+            jquery
+        </legend>
+        <input type="text" id="txt">
+        <input type="button" id="btn" value="Click">
+        <h1 class="show"></h1>
+    </fieldset>
+
+    <script>
+        // Su dung ham addEventListener de detect su kien cua th html
+        // detect su kien click cua id=tn
+        document.getElementById('btn').addEventListener('click', function () {
+            // lay gia tri cua the html co id=txt -> su dung thuoc tinh value
+            var str = document.querySelector('#txt').value;
+            // xuat thong tin ra the html co class=show
+            $('.show').html(str);
+        });
+    </script>
+</body>
+
+</html>

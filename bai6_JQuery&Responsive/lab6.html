@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab6</title>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+</head>
+
+<body>
+    <fieldset style="width: 500px; margin: auto;">
+        <legend>Change image</legend>
+        <div style="margin-bottom: 5px; width: 100%;">
+            <select name="" id="drd" style="width: 100%;">
+                <option value="images/anh1.jpg">1.jpg</option>
+                <option value="images/anh2.jpg">2.jpg</option>
+                <option value="images/anh3.jpg">3.jpg</option>
+                <option value="images/anh4.jpg">4.jpg</option>
+                <option value="images/anh5.jpg">5.jpg</option>
+            </select>
+        </div>
+        <img src="images/anh1.jpg" id="img-main" style="width: 500px;" alt="">
+    </fieldset>
+
+    <script>
+        $(document).ready(function () {
+            // detect su kien change cua id=drd
+            $('#drd').change(function () {
+                // Lay gia tri cua thuoc tinh value cua id=drd
+                var srcImg = $('#drd').val();
+                // tac dong vao thuoc tinh src cua id=img-main
+                $('#img-main').attr("src", srcImg);
+            });
+        });
+    </script>
+</body>
+
+</html>

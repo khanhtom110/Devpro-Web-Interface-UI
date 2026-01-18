@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7</title>
+    <!-- De su dung jquery can load thu vien -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+        img {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./images/anh1.jpg" id="img-main" alt="">
+    </div>
+
+    <script>
+        var slides = Array("images/anh1.jpg", "images/anh2.jpg", "images/anh3.jpg", "images/anh4.jpg", "images/anh5.jpg");
+        // Tao bien luu vi tri cua slide
+        var n = 0;
+        // Thuc hien vong lap lien tuc bang ham setInterval
+        setInterval(function () {
+            // Su dung ham fadeOut de lam cho anh cua id=img-main mờ dần roi thay bang anh khac
+            $("#img-main").fadeOut(function () {
+                n++;
+                $('#img-main').attr("src", slides[n]);
+                // Lam sang anh tro lai bang ham fadeIn
+                $('#img-main').fadeIn();
+            });
+            // Neu n vuot qua array slides thi reset n
+            if (n == slides.length - 1) {
+                n = -1;
+            }
+        }, 3000);
+
+        // Ve nha set 2 nut next va previous
+    </script>
+</body>
+
+</html>
