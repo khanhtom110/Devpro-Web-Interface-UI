@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./bootstraps/bootstrap.min.css'>
+    <script src='main.js'></script>
+    <style>
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1170px;
+            }
+        }
+
+        .card-header-custom {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    1. layout -> class để xác định content hoặc xây dựng bố cục trang web
+        Chú ý đối với 2 class container và container-fluid: có thể sử dụng trực tiếp trên class để custom css
+        => ngoài ra các class khác không nên css custom trục tiếp
+
+        - Grid quan trọng nhất bootstrap -> phân chia bố cục trang cũng như các thành phần trong trang
+         + Class row
+         + Class col: bootstrap chia khung chứa ra thành 12 cột bằng nhau
+          -> Ta sẽ sử dụng class col để xác định kích thước phần tử
+
+          col-{số cột nó chiếm}
+          col-{điểm break point}-{số cột nó chiếm}
+          -> Điểm break point bao gồm: sm(small), md(middle), lg(large), xl(extra large)
+             -sm: class chứa sm dùng cho màn hình từ 576px
+             -md: class chứa sm dùng cho màn hình từ 768px
+             -lg: class chứa sm dùng cho màn hình từ 992px
+             -xl: class chứa sm dùng cho màn hình từ 1200px
+    2. component: là các thành phần bootstrap tạo sẵn
+        - Cần tuân thủ đúng thứ tự cách đặt tên class và cấu trúc html
+        - Có thể custom cách hiển thị theo design mong muốn
+
+    3. Ultilies:
+     - Cung cấp các class sẵn
+     - 1 class nó tương đương 1 thuộc tính css + giá trị của nó
+
+    4. Margin và padding:
+     - Margin: (m)
+     => m{vị trí(t,r,b,l)(x,y)}-{điểm break point}-{kích thước(0,1,2,3,4,5,auto)}
+       0: set margin về 0
+       spacer = 1rem = 1em = 16px
+       1: spacer * 0.25 = 4px
+       2: spacer * 0.5 = 8px
+       3: spacer * 1 =16px
+       4: spacer * 1.5 = 24px
+       5: spacer * 3 = 48px
+       auto: căn giữa theo chiều ngang
+     - Padding:
+     => p{vị trí(t,r,b,l)(x,y)}-{điểm break point}-{kích thước(0,1,2,3,4,5)}
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card-header card-header-custom">
+                    <!-- Ta khong nen css truc tiep do thay doi ca thu vien -> anh huong den nguoi khac, ma nen tao ten class  -->
+                    Danh mục sản phẩm
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#">Quần áo dạo phố</a></li>
+                    <li class="list-group-item"><a href="#">Quần áo đi biển</a></li>
+                    <li class="list-group-item"><a href="#">Quần áo thường ngày</a></li>
+                </ul>
+            </div>
+            <div class="col-9 mt-5">
+                <div class="row">
+                    <!-- Muon cho 4 san pham thi 12 cot chia 4 = 3 => gan bang 3 cho col -->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top" src="./images/ao.jpg" alt="" width="100%">
+                            </a>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="#">
+                                        Áo phao nữ
+                                    </a>
+                                </h3>
+                                <p class="card-text">Áo lông cừu siêu mềm nhẹ, dễ giặt, mau khô.</p>
+                                <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./bootstraps/bootstrap.min.js"></script>
+</body>
+
+</html>
