@@ -9,9 +9,9 @@
 Dưới đây là link truy cập trực tiếp giao diện của các dự án đã hoàn thiện:
 
 * **🛒 Dự án 1: E-Commerce Website (Exclusive)**
-    * [Click để xem giao diện](https://khanhtom110.github.io/Devpro-Web-Interface-UI/bai4_figma/home.html)
+    * https://khanhtom110.github.io/Devpro-Web-Interface-UI/bai4_figma/home.html
 * **👗 Dự án 2: Fashion Website (CEIN.)**
-    * [Click để xem giao diện](https://khanhtom110.github.io/Devpro-Web-Interface-UI/Final_Project_Cein/index.html)
+    * https://khanhtom110.github.io/Devpro-Web-Interface-UI/Final_Project_Cein/index.html
 
 ---
 
