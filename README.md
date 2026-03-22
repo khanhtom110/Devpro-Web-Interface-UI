@@ -2,7 +2,16 @@
 
 Đây là Repository chứa toàn bộ source code và bài thực hành của **Phần 1: Frontend** trong Khóa học Java Full Stack tại Devpro.
 
-Mục tiêu của phần này là xây dựng giao diện người dùng tĩnh hoàn chỉnh, bao gồm cả giao diện PC và Mobile (Responsive), làm nền tảng cho dự án Full Stack cuối khóa.
+---
+
+## 🔗 XEM NHANH SẢN PHẨM (LIVE DEMO)
+
+Dưới đây là link truy cập trực tiếp giao diện của các dự án đã hoàn thiện:
+
+* **🛒 Dự án 1: E-Commerce Website (Exclusive)**
+    * [Click để xem giao diện](https://khanhtom110.github.io/Devpro-Web-Interface-UI/bai4_figma/home.html)
+* **👗 Dự án 2: Fashion Website (CEIN.)**
+    * [Click để xem giao diện](https://khanhtom110.github.io/Devpro-Web-Interface-UI/Final_Project_Cein/index.html)
 
 ---
 
@@ -41,11 +50,10 @@ Nội dung học được chia thành các buổi/module sau, tập trung vào v
 
 1.  **Clone Repository:**
     ```bash
-    git clone https://github.com/khanhtom110/Devpro-Web-Interface-UI
+    git clone [https://github.com/khanhtom110/Devpro-Web-Interface-UI](https://github.com/khanhtom110/Devpro-Web-Interface-UI)
     ```
 2.  **Mở bằng VS Code:**
     ```bash
     cd Devpro-Web-Interface-UI
-    code .
     ```
 3.  Mở các file `.html` bằng trình duyệt để xem kết quả.
